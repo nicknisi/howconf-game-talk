@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Brown Demo</title>
+	</head>
+	<body>
+		<canvas id="canvas" width="460" height="600"></canvas>
+		<script>
+			var dojoConfig = {
+				async: true,
+				baseUrl: 'js',
+				packages: [
+					{ name: 'dojo', location: 'bower_components/dojo' },
+					{ name: 'meek', location: 'bower_components/meek' },
+                    'brown'
+				]
+			};
+		</script>
+		<script src="js/bower_components/dojo/dojo.js"></script>
+		<script>
+			require([
+				'dojo/_base/declare',
+				'meek/system',
+				'meek/AnimationLoop',
+				'brown/SuperBrown'
+			], function (declare, meek, AnimationLoop, SuperBrown) {
+				var MyLoop = declare(AnimationLoop, {
+					constructor: function () {
+						this.addEntity(new SuperBrown());
+					}
+				});
+				/*
+				var r = new webkitSpeechRecognition(),
+				final_transcript = '';
+				r.continuous = true;
+				r.interimResults = true;
+
+				r.onresult = function (event) {
+					var interim_transcript = '';
+
+					for (var i = event.resultIndex; i < event.results.length; ++i) {
+						if (event.results[i].isFinal) {
+							final_transcript += event.results[i][0].transcript;
+						} else {
+							interim_transcript += event.results[i][0].transcript;
+						}
+					}
+
+					console.log(interim_transcript);
+				};
+
+				r.start();
+				*/
+
+				meek.start('canvas', MyLoop, 30, 460, 600);
+			});
+		</script>
+	</body>
+</html>

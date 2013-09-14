@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <canvas id="canvas" width="450" height="600"></canvas>
+    <script>
+        (function () {
+            var canvas = document.getElementById('canvas'),
+                context = canvas.getContext('2d'),
+                image = document.createElement('img');
+            image.onload = function () {
+                context.drawImage(image, 0, 0);
+            };
+
+            image.src = 'images/beakly.png';
+        })();
+    </script>
+</body>
+</html>

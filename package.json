@@ -1,0 +1,32 @@
+{
+  "name": "game-talk",
+  "version": "0.0.1",
+  "description": "A HowConf Lightning Talk on JavaScript Animation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicknisi/game-talk.git"
+  },
+  "keywords": [
+    "javascript",
+    "game",
+    "html5",
+    "dojo",
+    "canvas",
+    "amd"
+  ],
+  "author": "Nick Nisi",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt": "~0.4.1",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-contrib-livereload": "~0.1.2",
+    "grunt-regarde": "~0.1.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "intern": "~1.2.1"
+  }
+}
